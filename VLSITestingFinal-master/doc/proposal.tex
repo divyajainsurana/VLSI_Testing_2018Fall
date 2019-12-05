@@ -1,0 +1,78 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{graphicx}
+
+\title{
+  VLSI Testing Proposal \\
+  \large N-detect TDF ATPG and Compression
+}
+\author{
+  r06943085 黃韋智 \\
+  r07943091 錢柏均 \\
+  r07943108 朱宇融 \\
+  r07943158 Divya
+}
+
+\begin{document}
+\begin{CJK}{UTF8}{bkai}
+
+\maketitle
+
+\section{Schedule}
+
+  \begin{itemize}
+
+    \item basic version without compression: 12/12
+    \item progress presentation slide: 12/16
+    \item compression: 12/23
+    \item remaining part, optimization: 1/2
+    \item report, optimization: 1/8
+    \item demo: 1/15
+
+  \end{itemize}
+
+\section{Proposed Method}
+
+  \includegraphics[scale=0.5]{./flow.png}
+
+\section{Job Partition}
+
+  \begin{itemize}
+
+    \item static compression: Divya
+    \item constraint aware PODEM: 黃韋智
+    \item fault simulation: 錢柏均
+    \item fault dropping: 錢柏均
+    \item overall TDF ATPG flow: 朱宇融
+    \item dynamic compression: optional
+    \item fault dictionary: optional
+    \item test suit: 錢柏均
+
+  \end{itemize}
+
+\section{Reference}
+
+  \begin{itemize}
+
+    \item B. Benware, C. Schuermyer, S. Ranganathan, R. Madge, P. Krishnamurthy,
+          "Impact of multipledetect test patterns on product quality",
+          IEEE Int’l Test Conference, 2003.
+    \item I.Hamzaoglu, J.Patel,
+          "Test set compaction algorithms for combinational circuits",
+          ICCAD 1998.
+    \item Xiang, Dong, et al.
+          "Compact test generation with an Influence input measure for launch-on-capture transition fault testing",
+          IEEE Transactions on Very Large Scale Integration (VLSI) Systems 22.9 (2014)
+    \item H. Ichihara, A. Ogawa, T. Inoue, A. Tamura,
+          "Dynamic test compression using statistical codeing",
+          IEEE Proceedings 10th Asian Test Symposium, 2001.
+    \item Yu-Wei Chen, et al.
+          "Parallel order atpg for test compaction",
+          IEEE International Symposium on VLSI Design, Automation and Test, 2018
+
+  \end{itemize}
+
+\end{CJK}
+\end{document}

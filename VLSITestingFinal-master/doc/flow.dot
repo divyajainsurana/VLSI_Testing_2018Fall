@@ -1,0 +1,24 @@
+digraph Flow
+{
+  splines = ortho;
+  nodesep = 0.5;
+
+  node [ shape = box ];
+
+  { rank = same; 3; 6 }
+
+  1 [ label = "generate fault list"                       ];
+  2 [ label = "select a fault"                            ];
+  3 [ label = "use PODEM to generate V2"                  ];
+  4 [ label = "use PODEM to generate V1"                  ];
+  5 [ label = "dynamic compression"                       ];
+  6 [ label = "TDF fault simulation"                      ];
+  7 [ label = "fault dropping"                            ];
+  8 [ label = "fault not detected",       shape = diamond ];
+  9 [ label = "static compression"                        ];
+
+  1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8;
+
+  8 -> 2 [ xlabel = "yes", constraint = false ];
+  8 -> 9 [ xlabel = "no"  ];
+}
